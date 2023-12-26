@@ -1,0 +1,382 @@
+
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .main{
+        display: flex;
+        width: 100%;
+    }
+    .maincontainer{
+      width: 15%;
+    }
+    .company{
+        display: flex;
+    }
+    .cmsnav{
+        display: flex;
+        width: 100%;
+        height: 67px;
+        position: fixed;
+        background-color: white;
+        box-shadow: 0 4px 20px 0 rgba(0,0,0,0.2);
+    }
+    .logo i{
+        font-size: 40px;
+        color: blue;
+    }
+    .user{
+        margin-left: auto;
+        margin-right: 20%;
+        margin-top: auto;
+        margin-bottom: auto;
+
+    }
+    .actions{
+        width: 85%;
+
+    }
+    .sidebar{
+        width: 15%;
+        background-color: #071d53;
+        height: 100vh;
+        position: fixed;
+    }
+    .company_name h2{
+        color: white;
+    }
+    .menu{
+        width: 90%;
+        margin: auto;
+        margin-top:10%;
+    }
+    .menu_home{
+        display: flex;
+    }
+    .menu_icon_home{
+        color: white;
+    }
+    .menu_name_home{
+        color: white;
+        margin-left: 15px;
+    }
+    .menu_name_home span a{
+        text-decoration: none;
+        color: white;
+    }
+    .menu_country{
+        display: flex;
+        margin-top: 10%;
+    }
+    .menu_icon_country{
+        color: white;
+    }
+    .menu_name_country{
+        color: white;
+        margin-left: 15px;
+    }
+    .menu_name_country span a{
+        text-decoration: none;
+        color: white;
+    }
+    .menu_continent{
+        display: flex;
+        margin-top: 10%;
+    }
+    .menu_icon_continent{
+        color: white;
+    }
+    .menu_name_continent{
+        color: white;
+        margin-left: 15px;
+    }
+    .content{
+        background-color: #ebebeb;
+        width: 85%;
+        position: absolute;
+        top: 10%;
+        left: 15%;
+        z-index: -1;
+    }
+    .main_content{
+        width: 75%;
+        height: auto;
+        margin: 5% auto 10px 5%;
+        background-color: white;
+        border-radius: 5px;
+    }
+    .form{
+        display: block;
+    }
+    .formsubmission {
+        width: 100px;
+        cursor: pointer;
+        background-color: #008CBA;
+        height: 35px;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        margin-top: 5px;
+        padding: 7px;
+        float: right;
+    }
+    .button_list{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 3.5rem 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 5.5rem;
+        list-style: none;
+        text-align: center;
+    }
+    .maincontent_btn{
+        grid-column: 2/3;
+    }
+    .maincontent_btn li{
+        width: 100px;
+        cursor: pointer;
+        background-color: #008CBA;
+        height: 35px;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        margin-top: 5px;
+        padding: 7px;
+    }
+    .Key_points{
+        grid-column: 3/4;
+       
+    }
+    .Key_points li{
+        width: 100px;
+        cursor: pointer;
+        background-color: #008CBA;
+        height: 35px;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        margin-top: 5px;
+        padding: 7px;
+    }
+    .Use_case{
+        grid-column: 4/5;
+     
+    }
+    .Use_case li{
+        width: 100px;
+        cursor: pointer;
+        background-color: #008CBA;
+        height: 35px;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        margin-top: 5px;
+        padding: 7px;
+    }
+    .Country_partners{
+        grid-column: 5/6;
+    }
+    .Country_partners li{
+        width: 100px;
+        cursor: pointer;
+        background-color: #008CBA;
+        height: 45px;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        margin-top: 5px;
+        padding: 7px;
+    }
+
+    .sample_data_btn{
+        grid-column: 6/7;
+    }
+    .sample_data_btn li{
+        width: 100px;
+        cursor: pointer;
+        background-color: #008CBA;
+        height: 35px;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        margin-top: 5px;
+        padding: 7px;
+    }
+    .benifits_btn{
+        grid-column: 7/8;
+    }
+    .benifits_btn li{
+        width: 100px;
+        cursor: pointer;
+        background-color: #008CBA;
+        height: 35px;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        margin-top: 5px;
+        padding: 7px;
+    }
+    .faq_btn{
+        grid-column: 8/9;
+    }
+    .faq_btn li{
+        width: 100px;
+        cursor: pointer;
+        background-color: #008CBA;
+        height: 35px;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        margin-top: 5px;
+        padding: 7px;
+    }
+    .main_form_content{
+        width: 90%;
+        margin: 5% auto;
+    }
+    .main_form_content select{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+    }
+    .main_form_content input{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+    }
+    .fileinputcontainerproduct {
+        position: relative;
+        height: 100px;
+        border: 2px dashed #ccc;
+        border-radius: 6px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .fileinputcontainerproduct input[type="file"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .fileinputcontent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+   /* Key Points */
+   .key_points{
+        width: 90%;
+        margin: 5% auto;
+   }
+   .kp_wrap{
+        display: flex;
+   }
+   .logo{
+    width: 15%;
+   }
+   .kpimageinputcontainer{
+        position: relative;
+        width: auto;
+        height: auto;
+        border: 2px dashed #ccc;
+        border-radius: 50%;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+   }
+   .kpimageinputcontainer input[type="file"]{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+   }
+   .kpimageinput{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       gap: 8px;
+   }
+   .kp_inputs{
+    margin: auto;
+    width: 80%;
+   }
+   .kp_inputs input{
+    width: 97%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+/* Use Case */
+.use_case{
+    width: 90%;
+    margin: 5% auto;
+}
+.use_case input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+/* Country List */
+.country_parteners{
+    width: 90%;
+    margin: 5% auto;
+}
+.country_parteners input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+/* Sample Data */
+.sample_data{
+    width: 90%;
+    margin: 5% auto;
+}
+
+.sample_data input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.Benifits input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+.faq{
+    width: 90%;
+    margin: 5% auto;
+}
+.faq input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
