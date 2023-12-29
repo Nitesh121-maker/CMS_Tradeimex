@@ -13,6 +13,7 @@ class Controller extends BaseController
     public function index(){
         return view('index');
     }
+
     public function countryform(){
         $data = array(
             ""            =>  "Select Country",
@@ -122,5 +123,18 @@ class Controller extends BaseController
             "Venezuela"   =>  "Venezuela: TSA-11",
         );
         return view('country_form',compact('data'));
+    }
+    public function continentform(){
+        $data = array(
+            ""              =>   "Select continent",
+            "Asia"          =>   "Asia | AS-24",
+            "Africa"        =>   "Africa | AF-24", 
+            "Europe"        =>   "Europe | EU-34",
+            "North_America" =>   "North_America | NA-8" ,
+            "Oceania"       =>   "Oceania | OC-3" ,
+            "South America" =>   "South America | SA-11",
+           
+        );
+        return view('continent_form',compact('data'));
     }
 }

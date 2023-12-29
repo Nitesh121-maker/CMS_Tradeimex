@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('import', function (Blueprint $table) {
+        Schema::create('export', function (Blueprint $table) {
             $table->id();
             $table->string('Datatype');
             $table->string('country');
@@ -81,6 +81,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('import');
+        Schema::dropIfExists('export');
     }
 };

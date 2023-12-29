@@ -4,6 +4,7 @@
         padding: 0;
         font-family: Arial, Helvetica, sans-serif;
     }
+    
     .main{
         display: flex;
         width: 100%;
@@ -91,6 +92,10 @@
         color: white;
         margin-left: 15px;
     }
+    .menu_name_continent span a{
+        text-decoration: none;
+        color: white;
+    }
     .content{
         background-color: #ebebeb;
         width: 85%;
@@ -100,7 +105,7 @@
         z-index: -1;
     }
     .main_content{
-        width: 75%;
+        width:inherit;
         height: auto;
         margin: 5% auto 10px 5%;
         background-color: white;
@@ -165,7 +170,7 @@
         width: 100px;
         cursor: pointer;
         background-color: #008CBA;
-        height: 35px;
+        height: 45px;
         color: white;
         border-radius: 5px;
         border: none;
@@ -353,7 +358,13 @@
     width: 90%;
     margin: 5% auto;
 }
-
+.sample_data input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
 .sample_data input[type="file"] {
     width: 100%;
     padding: 10px;
@@ -379,4 +390,117 @@
     margin-bottom: 10px;
     border-radius: 4px;
     border: 1px solid #ccc;
+}
+.alldata{
+    width: 100%;
+    /* display: flex; */
+    background-color: white;
+}
+.datalist{
+    margin-top: 2%;
+    display: flex;
+    width: 100%;
+}
+.option {
+    width: 100%;
+    display: flex;
+    background-color: #e2d3d3;
+}
+.option span{
+    width: 5%;
+    display: flex;
+    margin-left: auto;
+
+}
+.alldatamain{
+    width: 60%;
+    margin-left: 2%;
+}
+.alldatafilter {
+    width: 30%;
+    margin-left: 5%;
+}
+.alldatafilter input,select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+.alldatafilter button{
+    margin-top: 2%;
+    display: inline-block;
+    padding: 7px 12px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    background-color: #3498db; /* Blue color */
+    color: #fff; /* White text */
+}
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 16px;
+    height: 40px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  button {
+    display: inline-block;
+    padding: 7px 12px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    background-color: #3498db; /* Blue color */
+    color: #fff; /* White text */
+}
+  .button {
+    display: inline-block;
+    padding: 7px 12px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Delete Button Styles */
+.delete-button {
+    background-color: #e74c3c; /* Red color */
+    color: #fff; /* White text */
+}
+
+/* Edit Button Styles */
+.edit-button {
+    background-color: #3498db; /* Blue color */
+    color: #fff; /* White text */
+}
+
+/* View Button Styles */
+.view-button {
+    background-color: #2ecc71; /* Green color */
+    color: #fff; /* White text */
+}
+
+/* Hover Styles for All Buttons */
+.button:hover {
+    background-color: darken(currentColor, 10%);
 }

@@ -3,11 +3,25 @@ $(document).ready(function() {
     $('#summernote').summernote();
   });
   $(document).ready(function() {
-    $('#summernotes').summernote();
+    $('#kpnotes').summernote();
+  });
+
+  $(document).ready(function() {
+    $('#kpnotestwo').summernote();
+  });
+  $(document).ready(function() {
+    $('#kpnotesthree').summernote();
+  });
+  $(document).ready(function() {
+    $('#kpnotesfour').summernote();
+  });
+  $(document).ready(function() {
+    $('#kpnotesfive').summernote();
   });
   $(document).ready(function() {
     $('#summernoteusecase').summernote();
   });
+
   $(document).ready(function() {
     $('#summernoteusecaseproduct').summernote();
   });
@@ -23,6 +37,10 @@ $(document).ready(function() {
   });
   $(document).ready(function() {
     $('#benifit_list').summernote();
+  });
+
+  $(document).ready(function() {
+    $('#sd_para').summernote();
   });
 
   $(document).ready(function() {
@@ -170,17 +188,34 @@ $(document).ready(function() {
     }
   }
 function displayFileName() {
-    let sliderimageInput = document.getElementById("sliderimageInput");
-    var displayspan      = document.getElementById("sliderinputspan")
+    let sliderimageInput = document.getElementById("imageInput");
+    var currentSpan      = document.getElementById("imageInputspan");
+    var displayspan      = document.getElementById("imagename")
 
     if (sliderimageInput.files && sliderimageInput.files.length > 0) {
-    
+        currentSpan.style.display = 'none';
         for (let i= 0; i< sliderimageInput.files.length; i++) {
         
-            displayspan.textContent += sliderimageInput.files[i].name + ", ";
+            displayspan.textContent += sliderimageInput.files[i].name + " ";
 
         }
       } else {
         displayspan.textContent = "Drag and drop files here";
       }
+}
+function displayFileNameone() {
+  let sliderimageInput = document.getElementById("kpimageInput");
+  var currentSpan      = document.getElementById("kpcurrentSpan");
+  var displayspan      = document.getElementById("kpinputspan")
+
+  if (sliderimageInput.files && sliderimageInput.files.length > 0) {
+      currentSpan.style.display = 'none';
+      for (let i= 0; i< sliderimageInput.files.length; i++) {
+      
+          displayspan.textContent += sliderimageInput.files[i].name + " ";
+
+      }
+    } else {
+      displayspan.textContent = "Drag and drop files here";
+    }
 }

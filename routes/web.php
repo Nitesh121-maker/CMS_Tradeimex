@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Storedata;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +17,9 @@ use App\Http\Controllers\Controller;
 
 Route::get('/',[Controller::class, 'index']);
 Route::get('/country',[Controller::class, 'countryform']);
+Route::get('/continent',[Controller::class, 'continentform']);
+Route::get('/country_alldata',[Storedata::class, 'alldata']);
+Route::post('/countrydata',[Storedata::class, 'storedata'])->name('countrydata');
+Route::get('/country_alldata',[Storedata::class, 'countrydata'])->name('countrydata_get');
+Route::get('/continentdata',[Storedata::class, 'continentData'])->name('continent_alldata');
+Route::post('/edit',[Storedata::class, 'editData'])->name('edit');

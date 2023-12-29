@@ -43,7 +43,7 @@
                         <i class="fa fa-flag"></i>
                     </div>
                     <div class="menu_name_country">
-                        <span><a href="/country">Country</a></span>
+                        <span><a href="/country_alldata">Country</a></span>
                     </div>
                 </li>
                 <li class="menu_continent">
@@ -51,7 +51,7 @@
                         <i class="fa fa-globe" aria-hidden="true"></i>
                     </div>
                     <div class="menu_name_continent">
-                        <span>Continent</span>
+                        <span><a href="/continentdata">Continent </a></span>
                     </div>
                 </li>
 
@@ -68,7 +68,11 @@
             </div>
         </div>
         <div class="content">
+           @yield('alldata')
            @yield('countryform')
+           @yield('continentform')
+           @yield('editdata')
+           @yield('continentdata')
         </div>
     </div>    
     </div>
