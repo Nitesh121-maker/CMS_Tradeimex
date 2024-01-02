@@ -148,6 +148,7 @@ $(document).ready(function() {
         faq.style.display              = "none";
     }
   }
+
   function benifits() {
     let maincontent =document.getElementById('main_content');
     let keypoints   =document.getElementById('key_points');
@@ -187,6 +188,60 @@ $(document).ready(function() {
         faq.style.display              = "block";
     }
   }
+  // Continent 
+  function main_content_continent() {
+    let maincontent =document.getElementById('main_content_continent');
+    let continent_imports     =document.getElementById('continent_imports');
+    let sampledata = document.getElementById('sample_data_continent')
+    let continent_parteners = document.getElementById('continent_parteners');
+
+    if (maincontent.style.display === "none") {
+        maincontent.style.display = "block";
+        continent_imports.style.display     = "none";
+        continent_parteners.style.display = "none";
+        sampledata.style.display       = "none";
+
+    }
+  }
+  function continent_imports() {
+    let maincontent =document.getElementById('main_content_continent');
+    let continent_imports     =document.getElementById('continent_imports');
+    let sampledata = document.getElementById('sample_data_continent')
+    let continent_parteners = document.getElementById('continent_parteners');
+    if(continent_imports.style.display === "none"){
+        maincontent.style.display           = "none";
+        continent_imports.style.display     = "block";
+        continent_parteners.style.display   = "none";
+        sampledata.style.display            = "none";
+    }
+  }
+  function continent_parteners() {
+    let maincontent =document.getElementById('main_content_continent');
+    let continent_imports     =document.getElementById('continent_imports');
+    let sampledata = document.getElementById('sample_data_continent')
+    let continent_parteners = document.getElementById('continent_parteners');
+    if(continent_parteners.style.display === "none"){
+        continent_parteners.style.display = "block";
+        maincontent.style.display      = "none";
+        continent_imports.style.display= "none";
+        sampledata.style.display       = "none";
+
+    }
+  }
+  function sampledatacontinent() {
+    let maincontent =document.getElementById('main_content_continent');
+    let continent_imports     =document.getElementById('continent_imports');
+    let sampledata = document.getElementById('sample_data_continent')
+    let continent_parteners = document.getElementById('continent_parteners');
+    if(sampledata.style.display === "none"){
+        sampledata.style.display       = "block";
+        continent_imports.style.display = "none";
+        maincontent.style.display      = "none";
+        continent_parteners.style.display          = "none";
+
+    }
+  }
+
 function displayFileName() {
     let sliderimageInput = document.getElementById("imageInput");
     var currentSpan      = document.getElementById("imageInputspan");

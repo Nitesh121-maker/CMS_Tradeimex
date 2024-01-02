@@ -1,33 +1,28 @@
 @extends('index')
 @section('continentform')
 <div class="main_content">
-    <form class="form" action="{{route('countrydata')}}" method="post">
+    <form class="form" action="{{url('/continentform')}}" method="post">
         @csrf
         <button class="formsubmission" type="submit"><i class="fa fa-save" style="font-size:24px"></i></button>
         <div class="button_list">
-            <div class="maincontent_btn"><li onclick="buttonlist()">Main Content</li></div>
-            <div class="Key_points"><li onclick="keypoints()" >Key Points</li></div>
-            <div class="Use_case"><li onclick="usecase()" >Country Imports</li></div>
-            <div class="Country_partners"><li onclick="countrypartners()" >Country Partners</li></div>
-            <div class="sample_data_btn"><li onclick="sampledata()" >Sample Data</li></div>
-            <div class="benifits_btn"><li onclick="benifits()" >Benifits</li></div>
-            <div class="faq_btn"><li onclick="faq()" >Faq</li></div>
+            <div class="maincontent_btn"><li onclick="main_content_continent()">Main Content</li></div>
+            {{-- <div class="Key_points"><li onclick="keypoints()" >Key Points</li></div> --}}
+            <div class="Use_case"><li onclick="continent_imports()" >Country Imports</li></div>
+            <div class="Country_partners"><li onclick="continent_parteners()" >Country Partners</li></div>
+            <div class="sample_data_btn"><li onclick="sampledatacontinent()" >Sample Data</li></div>
+
         </div>
 
-        <div class="main_form_content" id="main_content">
-            <select name="Datatype" id="">
-                <option value="">Select Data Type</option>
-                <option value="import">Import</option>
-                <option value="export">Export</option>
-            </select>
+        <div class="main_form_content" id="main_content_continent">
+
             <h2>Main Content</h2>
-            <select name="country_values" id="">
-                @foreach ($data as $country)
-                  <option value="{{$country}}">{{$country}}</option>
+            <select name="continent_values" id="">
+                @foreach ($data as $continent)
+                  <option value="{{$continent}}">{{$continent}}</option>
                 @endforeach
             </select>
             <input type="text" name="mf_content_heading" class="main_heading" placeholder="Main Heading" required><br>
-            <input type="text" name="mf_content_metatag" class="main_heading" placeholder="Meta Tag" required><br>
+            {{-- <input type="text" name="mf_content_metatag" class="main_heading" placeholder="Meta Tag" required><br> --}}
             <input type="text" name="mf_content_metatitle" class="main_heading" placeholder="Meta Title" required><br>
             <input type="text" name="mf_content_metadescription" class="main_heading" placeholder="Meta Description" required><br>
             <input type="text" name="mf_content_metakeywords" class="main_heading" placeholder="Meta Keywords" required><br>
@@ -46,16 +41,16 @@
         </div> 
 
         {{-- Imports --}}
-        <div class="use_case" id="use_case" style="display: none;">
+        <div class="use_case" id="continent_imports" style="display: none;">
             <h2>Top Ten Imports</h2>
-            <input type="text" name="uc_heading" class="use_case_heading" placeholder="Imports Heading"><br>
+            <input type="text" name="continent_imports_heading" class="use_case_heading" placeholder="Imports Heading"><br>
             <label for="textarea">Text Editor for paragraph</label><br>
-            <textarea id="summernoteusecase" name="uc_para"></textarea>
+            <textarea id="summernoteusecase" name="continent_imports_para"></textarea>
             <label for="textarea">Text Editor for Top Ten Product</label><br>
-            <textarea id="summernoteusecaseproduct" name="uc_product"></textarea>
+            <textarea id="summernoteusecaseproduct" name="continent_imports_product"></textarea>
         </div>
-        {{-- Country Partners --}}
-        <div class="country_parteners" id="country_parteners" style="display: none;">
+        {{-- Continent Partners --}}
+        <div class="country_parteners" id="continent_parteners" style="display: none;">
             <h2>Country Partners</h2>
             <input type="text" name="cp_heading"  placeholder="Country Partner Heading"><br>
             <label for="textarea">Country Partners Paragraph</label>
@@ -64,7 +59,7 @@
             <textarea id="country_partner_name" name="cp_name"></textarea>
         </div>
         {{-- Sample Data --}}
-        <div class="sample_data" id="sample_data" style="display: none;">
+        <div class="sample_data" id="sample_data_continent" style="display: none;">
             <h2>sample Data</h2>
             <input type="text" name="sd_heading"  placeholder="Sample Data Heading"><br>
             <label for="textarea">Country Partners Paragraph</label>

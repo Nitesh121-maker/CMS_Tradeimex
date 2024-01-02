@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Storedata;
+use App\Http\Controllers\ContinentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,4 +23,5 @@ Route::get('/country_alldata',[Storedata::class, 'alldata']);
 Route::post('/countrydata',[Storedata::class, 'storedata'])->name('countrydata');
 Route::get('/country_alldata',[Storedata::class, 'countrydata'])->name('countrydata_get');
 Route::get('/continentdata',[Storedata::class, 'continentData'])->name('continent_alldata');
+Route::post('/continentform',[ContinentController::class, 'continentformdata'])->name('continentformdata');
 Route::post('/edit',[Storedata::class, 'editData'])->name('edit');

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Countrydata;
 use App\Models\Countryexportdata;
+use App\Models\Continent;
 use DB;
 
 class Storedata extends Controller
@@ -48,7 +49,7 @@ class Storedata extends Controller
 
           'sd_heading'                 => 'nullable',
           'sd_para'                    => 'nullable',
-          'slider_images_three'        => 'nullable',
+          'slider_images_one'          => 'nullable',
           'data_file'                  => 'nullable',
 
 
@@ -302,7 +303,9 @@ class Storedata extends Controller
  
         return view('editcountrydata', ['countrydata' => $editdata]);
     }
+
     public function continentData(){
-        return view('continentdata');
+        $result = DB::select('SELECT continent, continent_code FROM continent');
+        return view('continentdata',['continentdata' =>$result]);
     }
 }
