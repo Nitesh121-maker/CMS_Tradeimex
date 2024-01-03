@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Storedata;
 use App\Http\Controllers\ContinentController;
+use App\Http\Controllers\CountrydataEditor;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,10 +19,13 @@ use App\Http\Controllers\ContinentController;
 
 Route::get('/',[Controller::class, 'index']);
 Route::get('/country',[Controller::class, 'countryform']);
-Route::get('/continent',[Controller::class, 'continentform']);
 Route::get('/country_alldata',[Storedata::class, 'alldata']);
 Route::post('/countrydata',[Storedata::class, 'storedata'])->name('countrydata');
 Route::get('/country_alldata',[Storedata::class, 'countrydata'])->name('countrydata_get');
+Route::get('/edit',[Storedata::class, 'editData'])->name('edit');
+Route::post('/edit',[CountrydataEditor::class, 'CountryDataEdit'])->name('edit');
+
+// Continent routes
+Route::get('/continent',[Controller::class, 'continentform']);
 Route::get('/continentdata',[Storedata::class, 'continentData'])->name('continent_alldata');
 Route::post('/continentform',[ContinentController::class, 'continentformdata'])->name('continentformdata');
-Route::post('/edit',[Storedata::class, 'editData'])->name('edit');

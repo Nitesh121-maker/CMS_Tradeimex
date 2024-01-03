@@ -1,8 +1,19 @@
 @extends('index')
 @section('editdata')
 <div class="main_content">
-    <form class="form" action="{{route('countrydata')}}" method="post">
+    @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+    @if(session('message'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+    @endif
+    <form class="form" action="{{route('edit')}}" method="post" enctype="multipart/form-data" >
         @csrf
+        @method('post')
         @foreach ($countrydata as $data)
         <button class="formsubmission" type="submit"><i class="fa fa-save" style="font-size:24px"></i></button>
         <div class="button_list">
@@ -23,8 +34,9 @@
             <select name="country_values" id="">
               
                   <option value="{{$data->country}}">{{$data->country}}</option>
-      
+             
             </select>
+
             <input type="text" name="mf_content_heading" class="main_heading" placeholder="Main Heading" value="{{$data->mf_content_heading}}"><br>
             <input type="text" name="mf_content_metatag" class="main_heading" placeholder="Meta Tag"value="{{$data->mf_content_metatag}}"><br>
             <input type="text" name="mf_content_metatitle" class="main_heading" placeholder="Meta Title"value="{{$data->mf_content_metatitle}}"><br>
@@ -34,7 +46,7 @@
             <textarea id="summernote" name="mf_content_editordata" value="">{{$data->mf_content_editordata}}</textarea>
             <label for="image">Images</label>
             <div class="fileinputcontainerproduct">
-                <input type="file" name="mf_content_images" id="imageInput" accept="image/*" multiple="" onchange="displayFileName()">
+                <input type="file" name="mf_content_images" id="imageInput" accept="image/*" multiple="" value="{{$data->mf_content_images}}" onchange="displayFileName()">
                 <div class="fileinputcontent">
                     <span id="imageInputspan">Drag and drop image here</span>
                     <span id="imagename"></span>
@@ -43,12 +55,13 @@
                 </div>
             </div>
         </div> 
+        {{-- Key Points --}}
         <div class="key_points" id="key_points" style="display: none;">
             <h2>Key Points</h2>
             <div class="kp_wrap">
                 <div class="logo">
                     <div class="kpimageinputcontainer">
-                        <input type="file" name="kpimages" id="kpimageInput" accept="image/*" multiple="" onchange="displayFileNameone()">
+                        <input type="file" name="kpimages" id="kpimageInput" accept="image/*"  onchange="displayFileNameone()">
                         <div class="kpimageinput">
                             <span id="kpcurrentSpan">Drag and drop logo </span>
                             <span id="kpinputspan"></span>
@@ -63,10 +76,11 @@
                     <textarea id="kpnotes" name="kpeditordata">{{$data->kpeditordata}}</textarea>
                 </div>
             </div>
+            <h2>Key Points two</h2>
             <div class="kp_wrap">
                 <div class="logo">
                     <div class="kpimageinputcontainer">
-                        <input type="file" name="kpimages" id="kpimageInput" accept="image/*" multiple="" onchange="displayFileNameone()">
+                        <input type="file" name="kpimages_two" id="kpimageInput" accept="image/*" multiple="" onchange="displayFileNameone()">
                         <div class="kpimageinput">
                             <span id="kpcurrentSpan">Drag and drop logo </span>
                             <span id="kpinputspan"></span>
@@ -76,15 +90,15 @@
                     </div>
                 </div>
                 <div class="kp_inputs">
-                    <input type="text" name="kp_head" class="keypoints_heading" placeholder="Keypoints Heading" value="{{$data->kp_head_two}}"><br>
+                    <input type="text" name="kp_head_two" class="keypoints_heading" placeholder="Keypoints Heading" value="{{$data->kp_head_two}}"><br>
                     <label for="textarea">Text Editor for Key Points Paragraph</label><br>
-                    <textarea id="kpnotestwo" name="kpeditordata">{{$data->kpeditordata_two}}</textarea>
+                    <textarea id="kpnotestwo" name="kpeditordata_two">{{$data->kpeditordata_two}}</textarea>
                 </div>
             </div>
             <div class="kp_wrap">
                 <div class="logo">
                     <div class="kpimageinputcontainer">
-                        <input type="file" name="kpimages" id="kpimageInput" accept="image/*" multiple="" onchange="displayFileNameone()">
+                        <input type="file" name="kpimages_three" id="kpimageInput" accept="image/*" multiple="" onchange="displayFileNameone()">
                         <div class="kpimageinput">
                             <span id="kpcurrentSpan">Drag and drop logo </span>
                             <span id="kpinputspan"></span>
@@ -94,15 +108,15 @@
                     </div>
                 </div>
                 <div class="kp_inputs">
-                    <input type="text" name="kp_head" class="keypoints_heading" placeholder="Keypoints Heading" value="{{$data->kp_head_three}}"><br>
+                    <input type="text" name="kp_head_three" class="keypoints_heading" placeholder="Keypoints Heading" value="{{$data->kp_head_three}}"><br>
                     <label for="textarea">Text Editor for Key Points Paragraph</label><br>
-                    <textarea id="kpnotesthree" name="kpeditordata">{{$data->kpeditordata_three}}</textarea>
+                    <textarea id="kpnotesthree" name="kpeditordata_three">{{$data->kpeditordata_three}}</textarea>
                 </div>
             </div>
             <div class="kp_wrap">
                 <div class="logo">
                     <div class="kpimageinputcontainer">
-                        <input type="file" name="kpimages" id="kpimageInput" accept="image/*" multiple="" onchange="displayFileNameone()">
+                        <input type="file" name="kpimages_four" id="kpimageInput" accept="image/*" multiple="" onchange="displayFileNameone()">
                         <div class="kpimageinput">
                             <span id="kpcurrentSpan">Drag and drop logo </span>
                             <span id="kpinputspan"></span>
@@ -112,15 +126,15 @@
                     </div>
                 </div>
                 <div class="kp_inputs">
-                    <input type="text" name="kp_head" class="keypoints_heading" placeholder="Keypoints Heading" value="{{$data->kp_head_four}}"><br>
+                    <input type="text" name="kp_head_four" class="keypoints_heading" placeholder="Keypoints Heading" value="{{$data->kp_head_four}}"><br>
                     <label for="textarea">Text Editor for Key Points Paragraph</label><br>
-                    <textarea id="kpnotesfour" name="kpeditordata">{{$data->kpeditordataa_four}}</textarea>
+                    <textarea id="kpnotesfour" name="kpeditordata_four">{{$data->kpeditordataa_four}}</textarea>
                 </div>
             </div>
             <div class="kp_wrap">
                 <div class="logo">
                     <div class="kpimageinputcontainer">
-                        <input type="file" name="kpimages" id="kpimageInput" accept="image/*" multiple="" onchange="displayFileNameone()">
+                        <input type="file" name="kpimages_five" id="kpimageInput" accept="image/*" multiple="" onchange="displayFileNameone()">
                         <div class="kpimageinput">
                             <span id="kpcurrentSpan">Drag and drop logo </span>
                             <span id="kpinputspan"></span>
@@ -132,7 +146,7 @@
                 <div class="kp_inputs">
                     <input type="text" name="kp_head_five" class="keypoints_heading" placeholder="Keypoints Heading" value="{{$data->kp_head_five}}"><br>
                     <label for="textarea">Text Editor for Key Points Paragraph</label><br>
-                    <textarea id="kpnotesfive" name="kpeditordata">{{$data->kpeditordata_five}}</textarea>
+                    <textarea id="kpnotesfive" name="kpeditordata_five">{{$data->kpeditordata_five}}</textarea>
                 </div>
             </div>
         </div>  

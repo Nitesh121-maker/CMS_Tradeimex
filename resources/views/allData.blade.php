@@ -6,7 +6,11 @@
     <span><a href="/country"><i class="fa fa-plus" style="font-size: 25px;" aria-hidden="true"></i></a></span>
   </div>
     <div class="datalist">
-
+      @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+      @endif
      <div class="alldatamain">
          <table>
              <tr>
@@ -27,7 +31,7 @@
                     <input type="hidden" name="country_code" value="{{$data->country_code}}">
                     <input type="hidden" name="datatype" value="{{$data->Datatype}}">
                     <td>
-                      <form action="{{url('/edit')}}" method="post" style="display: inline;">
+                      <form action="{{url('/edit')}}" method="get" style="display: inline;">
                         @csrf
                         <input type="hidden" name="country" value="{{$data->country}}">
                         <input type="hidden" name="country_code" value="{{$data->country_code}}">
