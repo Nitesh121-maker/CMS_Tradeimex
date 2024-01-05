@@ -1,11 +1,18 @@
 @extends('index')
 @section('editdata')
 <div class="main_content">
-    @if(session('success'))
-        <div class="alert alert-success">
+    {{-- @if(session('success'))
+        <div class="alert alert-success" id="edit-success-alert">
             {{ session('success') }}
         </div>
-    @endif
+        <script>
+            $(document).ready(function(){
+                setTimeout(function(){
+                    $("#edit-success-alert").fadeOut("slow");
+                }, 2000);
+            });
+        </script>
+    @endif --}}
     @if(session('message'))
     <div class="alert alert-success">
         {{ session('success') }}
@@ -42,8 +49,8 @@
             <input type="text" name="mf_content_metatitle" class="main_heading" placeholder="Meta Title"value="{{$data->mf_content_metatitle}}"><br>
             <input type="text" name="mf_content_metadescription" class="main_heading" placeholder="Meta Description"value="{{$data->mf_content_metadescription}}"><br>
             <input type="text" name="mf_content_metakeywords" class="main_heading" placeholder="Meta Keywords"value="{{$data->mf_content_metakeywords}}"><br>
-            <label for="textarea">Main content paragraph</label>
-            <textarea id="summernote" name="mf_content_editordata" value="">{{$data->mf_content_editordata}}</textarea>
+            <label for="textarea">Main content paragraph</label><br>
+            <textarea class="mf_content_para" id="summernote" name="mf_content_editordata" value="">{{$data->mf_content_editordata}}</textarea><br>
             <label for="image">Images</label>
             <div class="fileinputcontainerproduct">
                 <input type="file" name="mf_content_images" id="imageInput" accept="image/*" multiple="" value="{{$data->mf_content_images}}" onchange="displayFileName()">

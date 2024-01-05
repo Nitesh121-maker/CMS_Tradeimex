@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\Storedata;
 use App\Http\Controllers\ContinentController;
 use App\Http\Controllers\CountrydataEditor;
+use App\Http\Controllers\ContinentdataEditor;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,3 +30,4 @@ Route::post('/edit',[CountrydataEditor::class, 'CountryDataEdit'])->name('edit')
 Route::get('/continent',[Controller::class, 'continentform']);
 Route::get('/continentdata',[Storedata::class, 'continentData'])->name('continent_alldata');
 Route::post('/continentform',[ContinentController::class, 'continentformdata'])->name('continentformdata');
+Route::get('/continenteditform',[ContinentdataEditor::class, 'editcontinentData'])->name('continenteditform');

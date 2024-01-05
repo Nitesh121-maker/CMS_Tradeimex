@@ -1,7 +1,7 @@
 @extends('index')
 @section('continentform')
 <div class="main_content">
-    <form class="form" action="{{url('/continentform')}}" method="post">
+    <form class="form" action="{{url('/continentform')}}" method="post" enctype="multipart/form-data">
         @csrf
         <button class="formsubmission" type="submit"><i class="fa fa-save" style="font-size:24px"></i></button>
         <div class="button_list">
@@ -17,9 +17,9 @@
 
             <h2>Main Content</h2>
             <select name="continent_values" id="">
-                @foreach ($data as $continent)
+                
                   <option value="{{$continent}}">{{$continent}}</option>
-                @endforeach
+              
             </select>
             <input type="text" name="mf_content_heading" class="main_heading" placeholder="Main Heading" required><br>
             {{-- <input type="text" name="mf_content_metatag" class="main_heading" placeholder="Meta Tag" required><br> --}}
@@ -27,7 +27,7 @@
             <input type="text" name="mf_content_metadescription" class="main_heading" placeholder="Meta Description" required><br>
             <input type="text" name="mf_content_metakeywords" class="main_heading" placeholder="Meta Keywords" required><br>
             <label for="textarea">Main content paragraph</label>
-            <textarea id="summernote" name="mf_content_editordata"></textarea>
+            <textarea class="mf_content_para"  name="mf_content_editordata"></textarea>
             <label for="image">Images</label>
             <div class="fileinputcontainerproduct">
                 <input type="file" name="mf_content_images" id="imageInput" accept="image/*" multiple="" onchange="displayFileName()">

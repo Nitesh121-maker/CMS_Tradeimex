@@ -27,7 +27,7 @@
                     <td>{{$data->continent}}</td>
                     <td>{{$data->continent_code}}</td>
                     <td>
-                      <form action="{{url('/edit')}}" method="post" style="display: inline;">
+                      <form action="{{url('/continenteditform')}}" method="get" style="display: inline;">
                         @csrf
                         <input type="hidden" name="continent" value="{{$data->continent}}">
                         <input type="hidden" name="continent_Code" value="{{$data->continent_code}}">
