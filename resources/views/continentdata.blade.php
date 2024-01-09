@@ -14,6 +14,11 @@
     <div class="datalist">
 
      <div class="alldatamain">
+      @if(session('deletemessage'))
+        <div class="alert alert-success">
+            {{ session('deletemessage') }}
+        </div>
+      @endif
          <table>
              <tr>
                <th>Country</th>
@@ -35,12 +40,10 @@
                     </form>
             
                     <!-- Delete Form -->
-                    <form action="{{url('/delete')}}" method="post" style="display: inline;">
+                    <form action="{{url('/deletecontinent')}}" method="get" style="display: inline;">
                         @csrf
                         @method('DELETE') 
                         <input type="hidden" name="continent" value="{{$data->continent}}">
-                        <input type="hidden" name="continent_Code" value="{{$data->continent_code}}">
-    
                         <button type="submit" class="button delete-button">Delete</button>
                     </form>       
                     </td>  

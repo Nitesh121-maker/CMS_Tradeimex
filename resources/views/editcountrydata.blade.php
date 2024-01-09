@@ -13,7 +13,7 @@
             });
         </script>
     @endif --}}
-    @if(session('message'))
+    @if(session('success'))
     <div class="alert alert-success">
         {{ session('success') }}
     </div>

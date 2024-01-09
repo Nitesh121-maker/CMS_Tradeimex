@@ -11,7 +11,13 @@
             {{ session('success') }}
         </div>
       @endif
+
      <div class="alldatamain">
+      @if(session('deletemessage'))
+      <div class="alert alert-success">
+          {{ session('deletemessage') }}
+      </div>
+      @endif
          <table>
              <tr>
                <th>Country</th>
@@ -40,7 +46,7 @@
                     </form>
             
                     <!-- Delete Form -->
-                    <form action="{{url('/delete')}}" method="post" style="display: inline;">
+                    <form action="{{url('/deletecountry')}}" method="get" style="display: inline;">
                         @csrf
                         @method('DELETE') 
                         <input type="hidden" name="country" value="{{$data->country}}">
@@ -52,7 +58,7 @@
               </tr>
               @endforeach
               @else
-                  <tr>Tere is somthing wrong please wait for some time or add new data</tr>
+                  <tr>There is somthing wrong please wait for some time or add new data</tr>
               @endif
 
            </table>
