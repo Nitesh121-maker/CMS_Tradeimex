@@ -1,0 +1,65 @@
+.button_list_continent{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3.5rem 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 5.5rem;
+    list-style: none;
+    text-align: center;
+}
+.maincontent_btn{
+    grid-column: 2/3;
+}
+.maincontent_btn li{
+    width: 100px;
+    cursor: pointer;
+    background-color: #008CBA;
+    height: 35px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+    padding: 7px;
+}
+.use_case{
+    grid-column: 3/4;
+ 
+}
+.use_case li{
+    width: 100px;
+    cursor: pointer;
+    background-color: #008CBA;
+    height: 45px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+    padding: 7px;
+}
+
+.continent_partners{
+    grid-column: 4/5;
+}
+.continent_partners li{
+    width: 100px;
+    cursor: pointer;
+    background-color: #008CBA;
+    height: 45px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+    padding: 7px;
+}
+.sampledata_btn{
+    grid-column: 5/6;
+}
+.sampledata_btn li{
+    width: 100px;
+    cursor: pointer;
+    background-color: #008CBA;
+    height: 35px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+    padding: 7px;
+}

@@ -7,17 +7,19 @@
         </div>
 
     @endif
-    <form class="form" action="{{route('countrydata')}}" method="post" enctype="multipart/form-data">
+    <form id="myForm" class="form" action="{{route('countrydata')}}" method="post" enctype="multipart/form-data">
         @csrf
         <button class="formsubmission" type="submit"><i class="fa fa-save" style="font-size:24px"></i></button>
-        <div class="button_list">
-            <div class="maincontent_btn"><li onclick="buttonlist()">Main Content</li></div>
-            <div class="Key_points"><li onclick="keypoints()" >Key Points</li></div>
-            <div class="Use_case"><li onclick="usecase()" >Country Imports</li></div>
-            <div class="Country_partners"><li onclick="countrypartners()" >Country Partners</li></div>
-            <div class="sample_data_btn"><li onclick="sampledata()" >Sample Data</li></div>
-            <div class="benifits_btn"><li onclick="benifits()" >Benifits</li></div>
-            <div class="faq_btn"><li onclick="faq()" >Faq</li></div>
+        <div class="btn-grid">
+            <div class="button_list">
+                <div class="maincontent_btn"><li onclick="buttonlist()">Main Content</li></div>
+                <div class="Key_points"><li onclick="keypoints()" >Key Points</li></div>
+                <div class="Use_case"><li onclick="usecase()" >Country Imports</li></div>
+                <div class="Country_partners"><li onclick="countrypartners()" >Country Partners</li></div>
+                <div class="sample_data_btn"><li onclick="sampledata()" >Sample Data</li></div>
+                <div class="benifits_btn"><li onclick="benifits()" >Benifits</li></div>
+                <div class="faq_btn"><li onclick="faq()" >Faq</li></div>
+            </div>
         </div>
 
         <div class="main_form_content" id="main_content">
@@ -38,10 +40,11 @@
             <input type="text" name="mf_content_metadescription" class="main_heading" placeholder="Meta Description" required><br>
             <input type="text" name="mf_content_metakeywords" class="main_heading" placeholder="Meta Keywords" required><br>
             <label for="textarea">Main content paragraph</label>
-            <textarea class="mf_content_para" name="mf_content_editordata"></textarea>
+            <textarea id="mf_content_editordata" name="mf_content_editordata" class="mf_content_para"></textarea>
+
             <label for="image">Images</label>
             <div class="fileinputcontainerproduct">
-                <input type="file" name="mf_content_images" id="imageInput" accept="image/*" multiple="" onchange="displayFileName()">
+                <input type="file" name="mf_content_images" id="imageInput" accept="image/*" multiple="" onchange="displayFileName()" >
                 <div class="fileinputcontent">
                     <span id="imageInputspan">Drag and drop image here</span>
                     <span id="imagename"></span>
@@ -209,5 +212,6 @@
         </div>
     </form>
 </div>  
+
 
 @endsection

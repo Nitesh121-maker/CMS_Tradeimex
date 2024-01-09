@@ -31,3 +31,4 @@ Route::get('/continent',[Controller::class, 'continentform']);
 Route::get('/continentdata',[Storedata::class, 'continentData'])->name('continent_alldata');
 Route::post('/continentform',[ContinentController::class, 'continentformdata'])->name('continentformdata');
 Route::get('/continenteditform',[ContinentdataEditor::class, 'editcontinentData'])->name('continenteditform');
+Route::post('/continenteditedform',[ContinentdataEditor::class, 'ContinentDataedited'])->name('continentformdata');

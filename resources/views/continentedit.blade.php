@@ -2,16 +2,21 @@
 @section('continentedit')
 <div class="main_content">
 
-    <form class="form" action="{{url('/continentform')}}" method="post">
+    @if(session('successmessage'))
+    <div class="alert alert-success">
+        {{ session('successmessage') }}
+    </div>
+    @endif
+    <form class="form" action="{{url('/continenteditedform')}}" method="post">
         @csrf
         @foreach ($continentdata as $data)
             <button class="formsubmission" type="submit"><i class="fa fa-save" style="font-size:24px"></i></button>
-            <div class="button_list">
+            <div class="button_list_continent">
                 <div class="maincontent_btn"><li onclick="main_content_continent()">Main Content</li></div>
                 {{-- <div class="Key_points"><li onclick="keypoints()" >Key Points</li></div> --}}
-                <div class="Use_case"><li onclick="continent_imports()" >Country Imports</li></div>
-                <div class="Country_partners"><li onclick="continent_parteners()" >Country Partners</li></div>
-                <div class="sample_data_btn"><li onclick="sampledatacontinent()" >Sample Data</li></div>
+                <div class="use_case"><li onclick="continent_imports()" >Continent Imports</li></div>
+                <div class="continent_partners"><li onclick="continent_parteners()" >Continent Partners</li></div>
+                <div class="sampledata_btn"><li onclick="sampledatacontinent()" >Sample Data</li></div>
 
             </div>
 
@@ -75,7 +80,10 @@
                     {{$data->slider_images_one}}
                 </div>
                 <label for="image">Slider Image TWo</label>
+               <div>
+                {{$data->slider_images_two}}
                 <input type="file" name="slider_images_two" id="sliderimageInput" accept="image/*" ">
+               </div>
                 <label for="image">Slider Image Three</label>
                 <input type="file" name="slider_images_three" id="sliderimageInput" accept="image/*" ">
                 <label for="image">Slider Image Four</label>

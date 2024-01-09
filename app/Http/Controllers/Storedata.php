@@ -231,7 +231,7 @@ class Storedata extends Controller
                 $countrydata->Faq_para_three             = $validatedata['Faq_para_three'];
                 $countrydata->Faq_para_four              = $validatedata['Faq_para_four'];
                 $countrydata->Faq_para_five              = $validatedata['Faq_para_five'];
-     
+
                 $countrydata->save();
 
         }
@@ -401,7 +401,7 @@ class Storedata extends Controller
         }
 
         return redirect('/country')->with('success', 'Data Added successfully!');
-        dd($countrydata->mf_content_images);
+
     }
 
     public function alldata(){
