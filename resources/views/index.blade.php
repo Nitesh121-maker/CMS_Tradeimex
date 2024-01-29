@@ -11,6 +11,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{{url('frontend/css/index.css')}}">
     <link rel="stylesheet" href="{{url('frontend/css/continent.css')}}">
+    <script src="/frontend/js/index.js"></script>
     <title>CMS Tradeimex</title>
 </head>
 
@@ -65,6 +66,11 @@
             </div>
         </div>
         <div class="content">
+            {{-- <div class="styled-div">
+                <h2>Create Users</h2>
+                <p>Click the button below to create new users.</p>
+                <button class="create-users-button">Create Users</button>
+            </div> --}}
            @yield('alldata')
            @yield('countryform')
            @yield('continentform')
@@ -75,7 +81,7 @@
     </div>    
     </div>
     <script src="tinymce/js/tinymce/tinymce.min.js"></script>
-    <script src="/frontend/js/index.js"></script>
+
 
 
 </body>

@@ -19,8 +19,10 @@
 
             <h2>Main Content</h2>
             <select name="continent_values" id="">
-                
-                  <option value="{{$continent}}">{{$continent}}</option>
+                @foreach ($data as $continent)
+                   <option value="{{$continent}}">{{$continent}}</option>
+                @endforeach
+               
               
             </select>
             <input type="text" name="mf_content_heading" class="main_heading" placeholder="Main Heading" required><br>

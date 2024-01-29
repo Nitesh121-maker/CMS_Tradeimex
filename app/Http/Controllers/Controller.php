@@ -90,6 +90,7 @@ class Controller extends BaseController
             "Netherlands" =>  "Netherlands | TEU-23",
             "Polands"     =>  "Polands | TEU-24",
             "Portugal"    =>  "Portugal | TEU-25",
+            "Panama"      =>  "Panama | TEU-30",
             "Russia"      =>  "Russia | TEU-26",
             "Romania"     =>  "Romania | TEU-27",
             "Slovokia"    =>  "Slovokia | TEU-28",

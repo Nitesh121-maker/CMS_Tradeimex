@@ -157,6 +157,7 @@
                 </div>
             </div>
         </div>  
+        {{-- Country --}}
         <div class="use_case" id="use_case" style="display: none;">
             <h2>Use Case</h2>
             <input type="text" name="uc_heading" class="use_case_heading" placeholder="Use Case Heading" value="{{$data->uc_heading}}"><br>
@@ -165,6 +166,7 @@
             <label for="textarea">Text Editor for Top Ten Product</label><br>
             <textarea id="summernoteusecaseproduct" name="uc_product">{{$data->uc_product}}</textarea>
         </div>
+        {{-- Couintry Partners --}}
         <div class="country_parteners" id="country_parteners" style="display: none;">
             <h2>Country Partners</h2>
             <input type="text" name="cp_heading"  placeholder="Country Partner Heading" value="{{$data->cp_heading}}"><br>
@@ -173,11 +175,12 @@
             <label for="textarea">Country Partners Name</label>
             <textarea id="country_partner_name" name="cp_name">{{$data->country_partner_name}}</textarea>
         </div>
+        {{-- Sample Data --}}
         <div class="sample_data" id="sample_data" style="display: none;">
             <h2>sample Data</h2>
             <input type="text" name="sd_heading"  placeholder="Sample Data Heading" value="{{$data->sd_heading}}"><br>
             <label for="textarea">Country Partners Paragraph</label>
-            <textarea id="sd_para" name="sd_para"></textarea>
+            <textarea id="sd_para" name="sd_para">{{$data->sd_para}}</textarea>
             <label for="image">Sample data image</label>
             <input type="file" name="slider_images_one" id="sliderimageInput" accept="image/*" ">
             <label for="image">Upload File</label>
