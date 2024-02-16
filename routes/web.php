@@ -9,6 +9,7 @@ use App\Http\Controllers\ContinentdataEditor;
 use App\Http\Controllers\Deletecountry;
 use App\Http\Controllers\Deletecontinent;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FilterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,6 +29,7 @@ Route::get('/country',[Controller::class, 'countryform']);
 Route::get('/country_alldata',[Storedata::class, 'alldata']);
 Route::post('/countrydata',[Storedata::class, 'storedata'])->name('countrydata');
 Route::get('/country_alldata',[Storedata::class, 'countrydata'])->name('countrydata_get');
+Route::get('/filtered-country',[FilterController::class, 'Filterdata'])->name('filter');
 Route::get('/edit',[Storedata::class, 'editData'])->name('edit');
 Route::post('/edit',[CountrydataEditor::class, 'CountryDataEdit'])->name('edit');
 Route::get('/deletecountry',[Deletecountry::class, 'deletecountry'])->name('deletecountry');
