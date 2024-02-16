@@ -8,6 +8,7 @@ use App\Http\Controllers\CountrydataEditor;
 use App\Http\Controllers\ContinentdataEditor;
 use App\Http\Controllers\Deletecountry;
 use App\Http\Controllers\Deletecontinent;
+use App\Http\Controllers\AuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,6 +22,8 @@ use App\Http\Controllers\Deletecontinent;
 
 
 Route::get('/',[Controller::class, 'index']);
+Route::get('/tradeimex-cms-login',[AuthController::class, 'login']);
+Route::get('/tradeimex-cms-add-user',[AuthController::class, 'register']);
 Route::get('/country',[Controller::class, 'countryform']);
 Route::get('/country_alldata',[Storedata::class, 'alldata']);
 Route::post('/countrydata',[Storedata::class, 'storedata'])->name('countrydata');

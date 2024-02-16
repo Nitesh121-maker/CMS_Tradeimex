@@ -28,10 +28,14 @@
                     <option value="{{$data->continent}}">{{$data->continent}}</option>
                     
                 </select>
+                <label for="Heading">Main Heading Of Continent Page</label>
                 <input type="text" name="mf_content_heading" class="main_heading" value="{{$data->mf_content_heading}}" placeholder="Main Heading" required><br>
                 {{-- <input type="text" name="mf_content_metatag" class="main_heading" placeholder="Meta Tag" required><br> --}}
+                <label for="Meta Title">Meta Title</label>
                 <input type="text" name="mf_content_metatitle" class="main_heading" value="{{$data->mf_content_metatitle}}" placeholder="Meta Title" required><br>
+                <label for="Meta Description">Meta Description</label>
                 <input type="text" name="mf_content_metadescription" class="main_heading" value="{{$data->mf_content_metadescription}}" placeholder="Meta Description" required><br>
+                <label for="Meta Keywords">Meta Description</label>
                 <input type="text" name="mf_content_metakeywords" class="main_heading" value="{{$data->mf_content_metakeywords}}" placeholder="Meta Keywords" required><br>
                 <label for="textarea">Main content paragraph</label>
                 <textarea class="mf_content_para"  name="mf_content_editordata">{!!$data->mf_content_editordata!!}</textarea>

@@ -126,21 +126,20 @@ class CountrydataEditor extends Controller
                 $countrydata->kp_head_two                = $validatedata['kp_head_two'];
                 
                 $countrydata->kpeditordata_two           = $validatedata['kpeditordata_two'];
-                // $countrydata->kpimages_three             = $validatedata['kpimages_three'];
+
+                $countrydata->kp_head_three              = $validatedata['kp_head_three'];
                 if ($request->hasFile('kpimages_three')) {
                     $path = $request->file('kpimages_three');
                     $extension = $path->getClientOriginalExtension();
                 
                     // Generate a unique name for the image to avoid filename conflicts
-                    $imageName = uniqid() . '.' . $extension;
-                
+                    $countrypartenrimg = $countrydata->kp_head_three . '.' . $extension;
                     // Move the uploaded image to the desired storage location
-                    $path->move(public_path('frontend/img/import'), $imageName);
+                    $path->move(public_path('frontend/img/import'), $countrypartenrimg);
                 
                     // Set the image filename attribute on the Product model
-                    $countrydata->kpimages_three = $imageName;
+                    $countrydata->kpimages_three = $countrypartenrimg;
                 }
-                $countrydata->kp_head_three              = $validatedata['kp_head_three'];
                 $countrydata->kpeditordata_three         = $validatedata['kpeditordata_three'];
                 // $countrydata->kpimages_four              = $validatedata['kpimages_four'];
                 
@@ -294,20 +293,19 @@ class CountrydataEditor extends Controller
                 
                 $countrydata->kpeditordata_two           = $validatedata['kpeditordata_two'];
                 // $countrydata->kpimages_three             = $validatedata['kpimages_three'];
+                $countrydata->kp_head_three              = $validatedata['kp_head_three'];
                 if ($request->hasFile('kpimages_three')) {
                     $path = $request->file('kpimages_three');
                     $extension = $path->getClientOriginalExtension();
                 
                     // Generate a unique name for the image to avoid filename conflicts
-                    $imageName = uniqid() . '.' . $extension;
-                
+                    $countrypartenrimg = $countrydata->kp_head_three . '.' . $extension;
                     // Move the uploaded image to the desired storage location
-                    $path->move(public_path('frontend/img/import'), $imageName);
+                    $path->move(public_path('frontend/img/import'), $countrypartenrimg);
                 
                     // Set the image filename attribute on the Product model
-                    $countrydata->kpimages_three = $imageName;
+                    $countrydata->kpimages_three = $countrypartenrimg;
                 }
-                $countrydata->kp_head_three              = $validatedata['kp_head_three'];
                 $countrydata->kpeditordata_three         = $validatedata['kpeditordata_three'];
                 // $countrydata->kpimages_four              = $validatedata['kpimages_four'];
                 

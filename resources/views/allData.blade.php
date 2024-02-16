@@ -52,7 +52,7 @@
                         <input type="hidden" name="country" value="{{$data->country}}">
                         <input type="hidden" name="country_code" value="{{$data->country_code}}">
                         <input type="hidden" name="datatype" value="{{$data->Datatype}}">
-                        <button type="submit" class="button delete-button">Delete</button>
+                        {{-- <button type="submit" class="button delete-button">Delete</button> --}}
                     </form>       
                     </td>  
               </tr>
@@ -65,8 +65,7 @@
      </div>
      <div class="alldatafilter">
        <form action="">
-         <input type="text" name="country" id="country" placeholder="Country Name....">
-         <input type="text" name="Country Code" id="country" placeholder="Country Code....">
+         <input type="text" name="country_Code" id="country" placeholder="Country Code....">
          <select name="Datatype" id="">
           <option value="">Select Datatype</option>
           <option value="import">Import</option>

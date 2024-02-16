@@ -43,11 +43,15 @@
                   <option value="{{$data->country}}">{{$data->country}}</option>
              
             </select>
-
+            <label for="Heading">Main Heading Of Country Page</label>
             <input type="text" name="mf_content_heading" class="main_heading" placeholder="Main Heading" value="{{$data->mf_content_heading}}"><br>
+            <label for="Meta Tag">Meta Tag</label>
             <input type="text" name="mf_content_metatag" class="main_heading" placeholder="Meta Tag"value="{{$data->mf_content_metatag}}"><br>
+            <label for="Meta Tag">Meta Title</label>
             <input type="text" name="mf_content_metatitle" class="main_heading" placeholder="Meta Title"value="{{$data->mf_content_metatitle}}"><br>
+            <label for="Meta Tag">Meta Description</label>
             <input type="text" name="mf_content_metadescription" class="main_heading" placeholder="Meta Description"value="{{$data->mf_content_metadescription}}"><br>
+            <label for="Meta Tag">Meta Keywords</label>
             <input type="text" name="mf_content_metakeywords" class="main_heading" placeholder="Meta Keywords"value="{{$data->mf_content_metakeywords}}"><br>
             <label for="textarea">Main content paragraph</label><br>
             <textarea class="mf_content_para" id="summernote" name="mf_content_editordata" value="">{{$data->mf_content_editordata}}</textarea><br>
@@ -105,10 +109,10 @@
             <div class="kp_wrap">
                 <div class="logo">
                     <div class="kpimageinputcontainer">
-                        <input type="file" name="kpimages_three" id="kpimageInput" accept="image/*" multiple="" onchange="displayFileNameone()">
+                        <input type="file" name="kpimages_three" id="kpimageInputthree" accept="image/*" multiple="" onchange="displayFileNamethree()">
                         <div class="kpimageinput">
-                            <span id="kpcurrentSpan">Drag and drop logo </span>
-                            <span id="kpinputspan"></span>
+                            <span id="kpcurrentSpanthree">Drag and drop logo </span>
+                            <span id="kpinputspanthree"></span>
                             <span>or</span>
                             <button>Upload</button>
                         </div>

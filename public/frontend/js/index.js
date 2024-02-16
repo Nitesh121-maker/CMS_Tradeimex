@@ -236,3 +236,19 @@ function displayFileNameone() {
       displayspan.textContent = "Drag and drop files here";
     }
 }
+function displayFileNamethree() {
+  let sliderimageInput = document.getElementById("kpimageInputthree");
+  var currentSpan      = document.getElementById("kpcurrentSpanthree");
+  var displayspan      = document.getElementById("kpinputspanthree")
+
+  if (sliderimageInput.files && sliderimageInput.files.length > 0) {
+      currentSpan.style.display = 'none';
+      for (let i= 0; i< sliderimageInput.files.length; i++) {
+      
+          displayspan.textContent += sliderimageInput.files[i].name + " ";
+
+      }
+    } else {
+      displayspan.textContent = "Drag and drop files here";
+    }
+}

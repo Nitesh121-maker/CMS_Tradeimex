@@ -34,10 +34,15 @@
                   <option value="{{$country}}">{{$country}}</option>
                 @endforeach
             </select>
+            <label for="Heading">Main Heading Of Country Page</label>
             <input type="text" name="mf_content_heading" class="main_heading" placeholder="Main Heading" required><br>
+            <label for="Meta Tag">Meta Tag</label>
             <input type="text" name="mf_content_metatag" class="main_heading" placeholder="Meta Tag" required><br>
+            <label for="Meta Title">Meta Title</label>
             <input type="text" name="mf_content_metatitle" class="main_heading" placeholder="Meta Title" required><br>
+            <label for="Meta Description">Meta Description</label>
             <input type="text" name="mf_content_metadescription" class="main_heading" placeholder="Meta Description" required><br>
+            <label for="Meta Keywords">Meta Description</label>
             <input type="text" name="mf_content_metakeywords" class="main_heading" placeholder="Meta Keywords" required><br>
             <label for="textarea">Main content paragraph</label>
             <textarea id="mf_content_editordata" name="mf_content_editordata" class="mf_content_para"></textarea>
@@ -69,6 +74,7 @@
                     </div>
                 </div>
                 <div class="kp_inputs">
+                    <label for="Key Points">Key Points Images</label>
                     <input type="text" name="kp_head" class="keypoints_heading" placeholder="Keypoints Heading"><br>
                     <label for="textarea">Text Editor for Key Points Paragraph</label><br>
                     <textarea id="kpnotes" name="kpeditordata"></textarea>
@@ -77,7 +83,7 @@
             <div class="kp_wrap">
                 <div class="logo">
                     <div class="kpimageinputcontainer">
-                        <input type="file" name="kpimages_two" id="kpimageInput" accept="image/*" multiple="" onchange="displayFileNameone()">
+                        <input type="file" name="kpimages_two" id="kpimageInputtwo" accept="image/*" multiple="" onchange="displayFileNameone()">
                         <div class="kpimageinput">
                             <span id="kpcurrentSpan">Drag and drop logo </span>
                             <span id="kpinputspan"></span>
@@ -95,10 +101,10 @@
             <div class="kp_wrap">
                 <div class="logo">
                     <div class="kpimageinputcontainer">
-                        <input type="file" name="kpimages_three" id="kpimageInput" accept="image/*" multiple="" onchange="displayFileNameone()">
+                        <input type="file" name="kpimages_three" id="kpimageInputthree" accept="image/*" multiple="" onchange="displayFileNamethree()">
                         <div class="kpimageinput">
-                            <span id="kpcurrentSpan">Drag and drop logo </span>
-                            <span id="kpinputspan"></span>
+                            <span id="kpcurrentSpanthree">Drag and drop logo </span>
+                            <span id="kpinputspanthree"></span>
                             <span>or</span>
                             <button>Upload</button>
                         </div>
