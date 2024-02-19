@@ -86,7 +86,7 @@ class CountrydataEditor extends Controller
                     $extension = $path->getClientOriginalExtension();
         
                     // Generate a unique name for the image to avoid filename conflicts
-                    $imageName =  uniqid() . '.' . $extension;
+                    $imageName =  $path->getClientOriginalName();
         
                     // Move the uploaded image to the desired storage location
                     $path->move(public_path('/frontend/img/import'), $imageName);
@@ -94,6 +94,7 @@ class CountrydataEditor extends Controller
                     // Set the image filename attribute on the Product model
                     $countrydata->mf_content_images = $imageName;
                 }
+                
                 if ($request->hasFile('kpimages')) {
                     $path = $request->file('kpimages');
                     $extension = $path->getClientOriginalExtension();
@@ -191,7 +192,7 @@ class CountrydataEditor extends Controller
                     $extension = $path->getClientOriginalExtension();
         
                     // Generate a unique name for the image to avoid filename conflicts
-                    $imageName = uniqid() . '.' . $extension;
+                    $imageName =   $path . '.' . $extension;
         
                     // Move the uploaded image to the desired storage location
                     $path->move(public_path('frontend/img/others'), $imageName);
@@ -252,7 +253,7 @@ class CountrydataEditor extends Controller
                     $extension = $path->getClientOriginalExtension();
         
                     // Generate a unique name for the image to avoid filename conflicts
-                    $imageName = uniqid() . '.' . $extension;
+                    $imageName =  $path->getClientOriginalName();
         
                     // Move the uploaded image to the desired storage location
                     $path->move(public_path('/frontend/img/import'), $imageName);

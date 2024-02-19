@@ -91,10 +91,10 @@
             <div class="kp_wrap">
                 <div class="logo">
                     <div class="kpimageinputcontainer">
-                        <input type="file" name="kpimages_two" id="kpimageInput" accept="image/*" multiple="" onchange="displayFileNameone()">
+                        <input type="file" name="kpimages_two" id="kpimageInputtwo" accept="image/*" multiple="" onchange="kpimagesNametwo()">
                         <div class="kpimageinput">
-                            <span id="kpcurrentSpan">Drag and drop logo </span>
-                            <span id="kpinputspan"></span>
+                            <span id="kpcurrentSpantwo">Drag and drop logo </span>
+                            <span id="kpinputspantwo"></span>
                             <span>or</span>
                             <button>Upload</button>
                         </div>
@@ -127,10 +127,10 @@
             <div class="kp_wrap">
                 <div class="logo">
                     <div class="kpimageinputcontainer">
-                        <input type="file" name="kpimages_four" id="kpimageInput" accept="image/*" multiple="" onchange="displayFileNameone()">
+                        <input type="file" name="kpimages_four" id="kpimageInputfour" accept="image/*" multiple="" onchange="kpimagesNamefour()">
                         <div class="kpimageinput">
-                            <span id="kpcurrentSpan">Drag and drop logo </span>
-                            <span id="kpinputspan"></span>
+                            <span id="kpcurrentSpanfour">Drag and drop logo </span>
+                            <span id="kpinputspanfour"></span>
                             <span>or</span>
                             <button>Upload</button>
                         </div>
