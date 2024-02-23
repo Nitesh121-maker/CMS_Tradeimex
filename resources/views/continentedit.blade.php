@@ -7,7 +7,7 @@
         {{ session('successmessage') }}
     </div>
     @endif
-    <form class="form" action="{{url('/continenteditedform')}}" method="post">
+    <form class="form" action="{{url('/continenteditedform')}}" method="post" enctype="multipart/form-data">
         @csrf
         @foreach ($continentdata as $data)
             <button class="formsubmission" type="submit"><i class="fa fa-save" style="font-size:24px"></i></button>

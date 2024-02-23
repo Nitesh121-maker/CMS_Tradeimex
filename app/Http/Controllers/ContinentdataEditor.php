@@ -55,7 +55,7 @@ class ContinentdataEditor extends Controller
                  $imageName = uniqid() . '.' . $extension;
      
                  // Move the uploaded image to the desired storage location
-                 $path->move(public_path('/img/continent'), $imageName);
+                 $path->move(public_path('frontend/img/continent'), $imageName);
      
                  // Set the image filename attribute on the Product model
                  $continentdata->mf_content_images = $imageName;
@@ -73,22 +73,79 @@ class ContinentdataEditor extends Controller
              $continentdata->sd_para                    = $validatedata['sd_para'];
              // $continentdata->slider_images_one          = $validatedata['slider_images_one'];
              if ($request->hasFile('slider_images_one')) {
-                 $path = $request->file('slider_images_one');
-                 $extension = $path->getClientOriginalExtension();
-     
-                 // Generate a unique name for the image to avoid filename conflicts
-                 $imageName = uniqid() . '.' . $extension;
-     
-                 // Move the uploaded image to the desired storage location
-                 $path->move(public_path('/img/export'), $imageName);
-     
-                 // Set the image filename attribute on the Product model
-                 $continentdata->slider_images_one = $imageName;
-             }
+                $path = $request->file('slider_images_one');
+                // $extension = $path->getClientOriginalExtension();
+                $name      = $path->getClientOriginalName();
+    
+                // Generate a unique name for the image to avoid filename conflicts
+                $imageName = $name ;
+    
+                // Move the uploaded image to the desired storage location
+                $path->move(public_path('frontend/img/continent'), $imageName);
+    
+                // Set the image filename attribute on the Product model
+                $continentdata->slider_images_one = $imageName;
+            }
+            if ($request->hasFile('slider_images_two')) {
+                $path = $request->file('slider_images_two');
+                // $extension = $path->getClientOriginalExtension();
+                $name      = $path->getClientOriginalName();
+    
+                // Generate a unique name for the image to avoid filename conflicts
+                $imageName = $name ;
+    
+                // Move the uploaded image to the desired storage location
+                $path->move(public_path('frontend/img/continent'), $imageName);
+    
+                // Set the image filename attribute on the Product model
+                $continentdata->slider_images_two = $imageName;
+            }
+            if ($request->hasFile('slider_images_three')) {
+                $path = $request->file('slider_images_three');
+                // $extension = $path->getClientOriginalExtension();
+                $name      = $path->getClientOriginalName();
+    
+                // Generate a unique name for the image to avoid filename conflicts
+                $imageName = $name ;
+    
+                // Move the uploaded image to the desired storage location
+                $path->move(public_path('frontend/img/continent'), $imageName);
+    
+                // Set the image filename attribute on the Product model
+                $continentdata->slider_images_three = $imageName;
+            }
+            if ($request->hasFile('slider_images_four')) {
+                $path = $request->file('slider_images_four');
+                // $extension = $path->getClientOriginalExtension();
+                $name      = $path->getClientOriginalName();
+    
+                // Generate a unique name for the image to avoid filename conflicts
+                $imageName = $name ;
+    
+                // Move the uploaded image to the desired storage location
+                $path->move(public_path('frontend/img/continent'), $imageName);
+    
+                // Set the image filename attribute on the Product model
+                $continentdata->slider_images_four = $imageName;
+            }
+            if ($request->hasFile('slider_images_five')) {
+                $path = $request->file('slider_images_five');
+                // $extension = $path->getClientOriginalExtension();
+                $name      = $path->getClientOriginalName();
+    
+                // Generate a unique name for the image to avoid filename conflicts
+                $imageName = $name ;
+    
+                // Move the uploaded image to the desired storage location
+                $path->move(public_path('frontend/img/continent'), $imageName);
+    
+                // Set the image filename attribute on the Product model
+                $continentdata->slider_images_five = $imageName;
+            }
              // $continentdata->data_file                  = $validatedata['data_file'];
              if ($request->hasFile('data_file')) {
                  $path = $request->file('data_file');
-                 $extension = $path->getClientOriginalExtension();
+                //  $extension = $path->getClientOriginalExtension();
      
                  // Generate a unique name for the image to avoid filename conflicts
                  $fileName = uniqid() . '.' . $extension;
