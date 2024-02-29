@@ -1,0 +1,3 @@
+<br />
+<b>Warning</b>:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in <b>C:\xampp\htdocs\New_Tradeimex\admin\export.php</b> on line <b>5</b><br />
+<table><tr><th>title</th><th>content</th><th>image</th><th>Date</th></tr></table>
