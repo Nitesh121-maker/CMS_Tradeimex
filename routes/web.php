@@ -22,7 +22,8 @@ use App\Http\Controllers\FilterController;
 */
 
 
-Route::get('/',[Controller::class, 'index']);
+// Route::get('/',[Controller::class, 'index']);
+Route::get('/',[Controller::class, 'dashboard']);
 Route::get('/tradeimex-cms-login',[AuthController::class, 'login']);
 Route::get('/tradeimex-cms-add-user',[AuthController::class, 'register']);
 Route::get('/country',[Controller::class, 'countryform']);

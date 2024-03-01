@@ -13,6 +13,9 @@ class Controller extends BaseController
     public function index(){
         return view('index');
     }
+    public function dashboard(){
+        return view('dashboard');
+    }
     public function countryform(){
         $data = array(
             ""            =>  "Select Country",
@@ -106,9 +109,10 @@ class Controller extends BaseController
             "US"          =>  "US| TNA-7",
             "Zambia"      =>  "Zambia| TNA-8",
             "Panama"      =>  "Panama | TNA-9",
+            "Nicaragua"   =>  "Nicaragua | TNA-10",
             "Autralia"    =>  "Autralia| TOC-1",
             "Fiji_Fiji"   =>  "Fiji Fiji|TOC-2",
-            "New_Zealand" =>  "New Zealand| TOC-3",  
+            "New-Zealand" =>  "New-Zealand| TOC-3",  
             "Argentina"   =>  " Argentina|TSA-1",
             "Bolivia"     =>  "Bolivia|TSA-2",
             "Brazil"      =>  "Brazil|TSA-3",

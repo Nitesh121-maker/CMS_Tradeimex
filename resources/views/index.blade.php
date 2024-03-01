@@ -66,11 +66,7 @@
             </div>
         </div>
         <div class="content">
-            {{-- <div class="styled-div">
-                <h2>Create Users</h2>
-                <p>Click the button below to create new users.</p>
-                <button class="create-users-button">Create Users</button>
-            </div> --}}
+           @yield('dashboard')
            @yield('alldata')
            @yield('countryform')
            @yield('continentform')
