@@ -64,7 +64,7 @@
                                       <input type="hidden" name="country" value="{{$data->country}}">
                                       <input type="hidden" name="country_code" value="{{$data->country_code}}">
                                       <input type="hidden" name="datatype" value="{{$data->Datatype}}">
-                                      <button type="submit" class="button edit-button">Edit</button>
+                                      <button type="submit" class="edit-button">Edit</button>
                                   </form>
                                   <!-- Delete Form -->
                                   <form action="{{url('/deletecountry')}}" method="get" style="display: inline;">

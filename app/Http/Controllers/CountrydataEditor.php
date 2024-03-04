@@ -189,24 +189,24 @@ class CountrydataEditor extends Controller
                 // $countrydata->slider_images_one          = $validatedata['slider_images_one'];
                 if ($request->hasFile('slider_images_one')) {
                     $path = $request->file('slider_images_one');
-                    $extension = $path->getClientOriginalExtension();
+                    // $extension = $path->getClientOriginalExtension();
         
                     // Generate a unique name for the image to avoid filename conflicts
-                    $imageName =   $path . '.' . $extension;
+                    $sliderimageName =  $path->getClientOriginalName();
         
                     // Move the uploaded image to the desired storage location
-                    $path->move(public_path('frontend/img/others'), $imageName);
+                    $path->move(public_path('frontend/img/others'), $sliderimageName);
         
                     // Set the image filename attribute on the Product model
-                    $countrydata->slider_images_one = $imageName;
+                    $countrydata->slider_images_one = $sliderimageName;
                 }
                 // $countrydata->data_file                  = $validatedata['data_file'];
                 if ($request->hasFile('data_file')) {
                     $path = $request->file('data_file');
-                    $extension = $path->getClientOriginalExtension();
+                    // $extension = $path->getClientOriginalExtension();
         
                     // Generate a unique name for the image to avoid filename conflicts
-                    $fileName = uniqid() . '.' . $extension;
+                    $fileName = $path->getClientOriginalName();
         
                     // Move the uploaded file to the desired storage location
                     $path->move(public_path('frontend/files'), $fileName);
