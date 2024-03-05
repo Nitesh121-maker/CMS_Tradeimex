@@ -358,7 +358,7 @@ class CountrydataEditor extends Controller
                     $extension = $path->getClientOriginalExtension();
         
                     // Generate a unique name for the image to avoid filename conflicts
-                    $imageName = uniqid() . '.' . $extension;
+                    $imageName =  $path->getClientOriginalName();
         
                     // Move the uploaded image to the desired storage location
                     $path->move(public_path('frontend/img/others'), $imageName);
