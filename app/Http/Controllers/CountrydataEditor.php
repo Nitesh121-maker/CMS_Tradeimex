@@ -48,6 +48,10 @@ class CountrydataEditor extends Controller
             'sd_heading'                 => 'nullable',
             'sd_para'                    => 'nullable',
             'slider_images_one'          => 'nullable',
+            'stats_data_img'             => 'nullable',
+            'stats_data_file'            => 'nullable',
+            'bl_data_img'                => 'nullable',
+            'bl_data_file'               => 'nullable',
             'data_file'                  => 'nullable',
   
   
