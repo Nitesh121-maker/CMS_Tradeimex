@@ -189,8 +189,12 @@
             @if ($data->country == "Japan"||$data->country == "Singapore"||$data->country == "Taiwan"||$data->country == "Balgium"||$data->country == "Germany"||$data->country == "Greece"||$data->country == "Italy"||$data->country == "Netherlands"||$data->country == "Spain"||$data->country == "Uk"||$data->country == "Canada"||$data->country == "Australia")
                 <label for="image">Statistical-data data image</label>
                 <input type="file" name="statistical_sample_data_images" id="statistical_sample" accept="image/*" ">
+                <label for="image">Upload Statistical_Sample_Data File</label>
+                <input type="file" name="statistical_data_file" id="sliderimageInput" accept=".csv,.xls,.xlsx">
                 <label for="image">BL-data data image</label>
                 <input type="file" name="bl_sample_data_images" id="bl_sample" accept="image/*" ">
+                <label for="image">Upload BL Data File</label>
+                <input type="file" name="bl_data_file" id="sliderimageInput" accept=".csv,.xls,.xlsx">
             @else
                 <label for="image">Sample data image</label>
                 <input type="file" name="slider_images_one" id="sliderimageInput" accept="image/*" ">

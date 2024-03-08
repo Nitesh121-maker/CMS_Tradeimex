@@ -55,6 +55,8 @@ class CountrydataEditor extends Controller
             'bl_data_img'                => 'nullable',
             'bl_data_file'               => 'nullable',
             'data_file'                  => 'nullable',
+            'statistical_data_file'      => 'nullable',
+            'bl_data_file'               => 'nullable',
   
   
             'benifit_heading'            => 'nullable',
@@ -231,6 +233,32 @@ class CountrydataEditor extends Controller
         
                     // Set the image filename attribute on the Product model
                     $countrydata->bl_data_img = $blimageName;
+                }
+                if ($request->hasFile('statistical_data_file')) {
+                    $path = $request->file('statistical_data_file');
+                    // $extension = $path->getClientOriginalExtension();
+        
+                    // Generate a unique name for the image to avoid filename conflicts
+                    $fileName = $path->getClientOriginalName();
+        
+                    // Move the uploaded file to the desired storage location
+                    $path->move(public_path('frontend/files'), $fileName);
+        
+                    // Set the file filename attribute on the Product model
+                    $countrydata->stats_data_file = $fileName;
+                }
+                if ($request->hasFile('bl_data_file')) {
+                    $path = $request->file('bl_data_file');
+                    // $extension = $path->getClientOriginalExtension();
+        
+                    // Generate a unique name for the image to avoid filename conflicts
+                    $blfileName = $path->getClientOriginalName();
+        
+                    // Move the uploaded file to the desired storage location
+                    $path->move(public_path('frontend/files'), $blfileName);
+        
+                    // Set the file filename attribute on the Product model
+                    $countrydata->bl_data_file = $blfileName;
                 }
                 // $countrydata->data_file                  = $validatedata['data_file'];
                 if ($request->hasFile('data_file')) {
