@@ -100,6 +100,7 @@ class Controller extends BaseController
             "Sweden"      =>  "Sweden | TEU-31",
             "UK"          =>  "UK | TEU-32",
             "Ukraine"     =>  "Ukraine | TEU-33",
+
             "Canada"      =>  "Canada| TNA-1",
             "Costa-Rica"  =>  "Costa-Rica| TNA-2",
             "EL-Salvador" =>  "EL-Salvador| TNA-3",
@@ -110,9 +111,10 @@ class Controller extends BaseController
             "Nicaragua"   =>  "Nicaragua | TNA-8",
             "Panama"      =>  "Panama | TNA-9",
         
-            "Autralia"    =>  "Autralia| TOC-1",
-            "Fiji_Fiji"   =>  "Fiji Fiji|TOC-2",
-            "New-Zealand" =>  "New-Zealand| TOC-3",  
+            "Australia"    =>  "Australia| TOC-1",
+            "Fiji"         =>  "Fiji|TOC-2",
+            "New-Zealand"  =>  "New-Zealand| TOC-3",  
+
             "Argentina"   =>  " Argentina|TSA-1",
             "Bolivia"     =>  "Bolivia|TSA-2",
             "Brazil"      =>  "Brazil|TSA-3",

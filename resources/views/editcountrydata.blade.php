@@ -185,8 +185,17 @@
             <input type="text" name="sd_heading"  placeholder="Sample Data Heading" value="{{$data->sd_heading}}"><br>
             <label for="textarea">Country Partners Paragraph</label>
             <textarea id="sd_para" name="sd_para">{{$data->sd_para}}</textarea>
-            <label for="image">Sample data image</label>
-            <input type="file" name="slider_images_one" id="sliderimageInput" accept="image/*" ">
+           
+            @if ($data->country == "Japan"||$data->country == "Singapore"||$data->country == "Taiwan"||$data->country == "Balgium"||$data->country == "Germany"||$data->country == "Greece"||$data->country == "Italy"||$data->country == "Netherlands"||$data->country == "Spain"||$data->country == "Uk"||$data->country == "Canada"||$data->country == "Australia")
+                <label for="image">Statistical-data data image</label>
+                <input type="file" name="statistical_sample_data_images" id="statistical_sample" accept="image/*" ">
+                <label for="image">BL-data data image</label>
+                <input type="file" name="bl_sample_data_images" id="bl_sample" accept="image/*" ">
+            @else
+                <label for="image">Sample data image</label>
+                <input type="file" name="slider_images_one" id="sliderimageInput" accept="image/*" ">
+            @endif
+       
             <label for="image">Upload File</label>
             <input type="file" name="data_file" id="sliderimageInput" accept=".csv,.xls,.xlsx">
             {{-- <label for="image">Slider Image Two</label>

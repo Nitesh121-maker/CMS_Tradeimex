@@ -27,7 +27,7 @@ class Deletecountry extends Controller
             if ($countryrow) {
                 # code...
                 $countryrow->delete();
-                return redirect()->back()->with('deletemessage', "Data of '$countryName' is deleted successfully!");
+                return redirect()->back()->with('deletemessage', "Data of is deleted successfully!");
             }
         }
         
