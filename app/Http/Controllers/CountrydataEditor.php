@@ -434,7 +434,7 @@ class CountrydataEditor extends Controller
                     $imageName =  $path->getClientOriginalName();
         
                     // Move the uploaded image to the desired storage location
-                    $path->move(public_path('frontend/img/others'), $imageName);
+                    $path->move(public_path('frontend/img/stasticaldata'), $imageName);
         
                     // Set the image filename attribute on the Product model
                     $countrydata->stats_data_img = $imageName;

@@ -102,7 +102,7 @@ class FilterController extends Controller
                 "Nicaragua"   =>  "Nicaragua | TNA-8",
                 "Panama"      =>  "Panama | TNA-9",
                 "Autralia"    =>  "Autralia| TOC-1",
-                "Fiji_Fiji"   =>  "Fiji Fiji|TOC-2",
+                "Fiji"        =>  "Fiji|TOC-2",
                 "New_Zealand" =>  "New Zealand| TOC-3",  
                 "Argentina"   =>  " Argentina|TSA-1",
                 "Bolivia"     =>  "Bolivia|TSA-2",

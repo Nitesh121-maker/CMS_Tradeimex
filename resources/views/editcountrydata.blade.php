@@ -186,7 +186,7 @@
             <label for="textarea">Country Partners Paragraph</label>
             <textarea id="sd_para" name="sd_para">{{$data->sd_para}}</textarea>
            
-            @if ($data->country == "Japan"||$data->country == "Singapore"||$data->country == "Taiwan"||$data->country == "Balgium"||$data->country == "Germany"||$data->country == "Greece"||$data->country == "Italy"||$data->country == "Netherlands"||$data->country == "Spain"||$data->country == "Uk"||$data->country == "Canada"||$data->country == "Australia")
+            @if ($data->country == "Japan"||$data->country == "Malaysia"||$data->country == "Singapore"||$data->country == "Taiwan"||$data->country == "Belgium"||$data->country == "Germany"||$data->country == "Greece"||$data->country == "Italy"||$data->country == "Netherlands"||$data->country == "Spain"||$data->country == "UK"||$data->country == "Canada"||$data->country == "Australia")
                 <label for="image">Statistical-data data image</label>
                 <input type="file" name="statistical_sample_data_images" id="statistical_sample" accept="image/*" ">
                 <label for="image">Upload Statistical_Sample_Data File</label>

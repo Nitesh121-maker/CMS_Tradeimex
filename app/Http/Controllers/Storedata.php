@@ -147,7 +147,7 @@ class Storedata extends Controller
                     // Set the image filename attribute on the Product model
                     $countrydata->kpimages_three = $countrypartenrimg;
                 }
-                dd($countrypartenrimg);
+               
                 $countrydata->kpeditordata_three         = $validatedata['kpeditordata_three'];
                 // $countrydata->kpimages_four              = $validatedata['kpimages_four'];
                 
@@ -507,7 +507,7 @@ class Storedata extends Controller
                 "Panama"      =>  "Panama | TNA-9",
 
                 "Autralia"    =>  "Autralia| TOC-1",
-                "Fiji_Fiji"   =>  "Fiji Fiji|TOC-2",
+                "Fiji"        =>  "Fiji |TOC-2",
                 "New_Zealand" =>  "New Zealand| TOC-3",  
                 "Argentina"   =>  " Argentina|TSA-1",
                 "Bolivia"     =>  "Bolivia|TSA-2",
