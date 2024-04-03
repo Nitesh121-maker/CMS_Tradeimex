@@ -76,13 +76,13 @@
 <body>
 <div class="registration-container">
     <h2>Admin Registration</h2>
-    <form id="registrationForm" action="">
-        <input type="text" name="username" placeholder="Username">
-        <input type="password" id="password" name="password" placeholder="Password">
-        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password">
-        <input type="email" name="email" placeholder="Email">
-        <button type="button" id="otpButton" class="otp-button">Get OTP</button>
-        <input type="number" name="otp" placeholder="OTP">
+    <form id="registrationForm" action="{{url('/registeradmin')}}" method="POST">
+        @csrf
+        <input type="text" name="admin_name" placeholder="Username">
+        <input type="email" name="admin_email" placeholder="Email">
+        <input type="password" id="admin_password" name="password" placeholder="Password">
+        {{-- <button type="button" id="otpButton" class="otp-button">Get OTP</button>
+        <input type="number" name="otp" placeholder="OTP"> --}}
         <input type="submit" value="Register">
     </form>
     <div id="errorMessage" class="error-message"></div>

@@ -23,8 +23,13 @@ use App\Http\Controllers\FilterController;
 
 
 // Route::get('/',[Controller::class, 'index']);
-Route::get('/',[Controller::class, 'dashboard']);
-Route::get('/tradeimex-cms-login',[AuthController::class, 'login']);
+
+Route::middleware('auth')->group(function () {
+    // Protected routes that require authentication
+    Route::get('/',[Controller::class, 'dashboard'])->name('dashboard');
+});
+
+Route::get('/tradeimex-cms-login',[AuthController::class, 'login'])->name('login');
 Route::get('/tradeimex-cms-add-user',[AuthController::class, 'register']);
 Route::get('/country',[Controller::class, 'countryform']);
 Route::get('/country_alldata',[Storedata::class, 'alldata']);
@@ -41,3 +46,6 @@ Route::post('/continentform',[ContinentController::class, 'continentformdata'])-
 Route::get('/continenteditform',[ContinentdataEditor::class, 'editcontinentData'])->name('continenteditform');
 Route::post('/continenteditedform',[ContinentdataEditor::class, 'ContinentDataedited'])->name('continentformdata');
 Route::get('/deletecontinent',[Deletecontinent::class, 'deletecontinent'])->name('deletecontinent');
+
+Route::post('/registeradmin',[AuthController::class,'adduser'])->name('add-admin');
+Route::post('/loginadmin',[AuthController::class,'checkUser'])->name('login-admin');

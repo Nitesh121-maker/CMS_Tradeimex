@@ -135,7 +135,7 @@ class Controller extends BaseController
             "Asia"          =>   "Asia | AS-24",
             "Africa"        =>   "Africa | AF-24", 
             "Europe"        =>   "Europe | EU-34",
-            "North-America" =>   "North America | NA-8" ,
+            "North-America" =>   "North America | NA-9" ,
             "Oceania"       =>   "Oceania | OC-3" ,
             "South-America" =>   "South America | SA-11",
            

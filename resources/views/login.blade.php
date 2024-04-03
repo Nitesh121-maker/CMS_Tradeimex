@@ -32,7 +32,7 @@
         color: #333;
     }
 
-    input[type="text"],
+    input[type="email"],
     input[type="password"] {
         width: 100%;
         padding: 10px;
@@ -64,13 +64,20 @@
 </head>
 <body>
 <div class="login-container">
-    <h2>Login</h2>
-    <form action="">
-        <input type="text" name="username" placeholder="Username">
+    <h2>Tradeimex CMS Login</h2>
+    <form method="POST" action="{{ url('/loginadmin') }}"  id="loginForm">
+        @csrf
+        <input type="email" name="admin_email" placeholder="User Email">
         <input type="password" name="password" placeholder="Password">
         <input type="submit" value="Login">
     </form>
-    <div class="error-message"></div>
+    <div class="error-message">
+        @if (session('admin-login-error'))
+            <div class="alert alert-danger">
+                {{ session('admin-login-error') }}
+            </div>
+        @endif
+    </div>
 </div>
 </body>
 </html>
