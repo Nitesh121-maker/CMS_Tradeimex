@@ -30,7 +30,7 @@
     .user{
         margin-left: auto;
         margin-right: 20%;
-        margin-top: auto;
+        margin-top: -11px;
         margin-bottom: auto;
 
     }
@@ -548,4 +548,24 @@
 /* Hover Styles for All Buttons */
 .button:hover {
     background-color: darken(currentColor, 10%);
+}
+
+.logout-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.logout-button:hover {
+    background-color: #45a049; /* Darker Green */
 }

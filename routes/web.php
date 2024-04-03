@@ -49,3 +49,4 @@ Route::get('/deletecontinent',[Deletecontinent::class, 'deletecontinent'])->name
 
 Route::post('/registeradmin',[AuthController::class,'adduser'])->name('add-admin');
 Route::post('/loginadmin',[AuthController::class,'checkUser'])->name('login-admin');
+Route::post('/logout',[AuthController::class,'logout'])->name('logout');

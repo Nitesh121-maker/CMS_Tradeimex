@@ -16,6 +16,9 @@
 </head>
 
 <body>
+    @if (session('logout_message'))
+        <script>window.location = "{{ url('/tradeimex-cms-login') }}";</script>
+    @endif
     <div class="main">
       <div class="maincontainer">
         <div class="sidebar">
@@ -60,9 +63,10 @@
       <div class="actions">
         <div class="cmsnav">
             <div class="user">
-                <div class="logo">
-                    <i class="fa fa-user"></i>
-                </div>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button type="submit" class="logout-button">Logout</button>
+                </form>  
             </div>
         </div>
         <div class="content">

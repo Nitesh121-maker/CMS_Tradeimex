@@ -67,6 +67,11 @@ class AuthController extends Controller
     // Logout
     public function logout(Request $request) {
         Auth::logout();
-        return redirect('/login');
+        $request->session()->flash('logout_message', 'You have been logged out.');
+        return redirect('/tradeimex-cms-login')->withHeaders([
+            'Cache-Control' => 'no-cache, no-store, must-revalidate',
+            'Pragma' => 'no-cache',
+            'Expires' => '0',
+        ]);
     }
 }
